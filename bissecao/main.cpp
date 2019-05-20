@@ -12,7 +12,7 @@ float f(float x){
 }
 
 int main(int argc, char * argv[]) {
-    float epsilon = 0;
+    float epsilon = 0, x_barrado = 0, raiz = 0;
     int a = 0, b = 0;
 
     cout << "Digite um valor para a precisão (ε): ";
@@ -33,15 +33,17 @@ int main(int argc, char * argv[]) {
     cout << "f(b) = " << "cos(" << b << ") - 2·" << b << "³ = " << f(b) << endl;
     cout << "f(a)·f(b) = " << "f(" << a << ")·f(" << b << ") = " << f(a)*f(b) << endl;
 
-    cout << endl;
-
     if ((b - a) < epsilon) {
          cout << "X0 = " << (b - a) << " é a raíz procurada." << endl;
          return 0;
 
     } else cout << "Como a diferença dos extremos do intervalo não foi menor que o erro, o processo continua:" << endl;
     
-//    for (int k = 1; c)
+    int k = 1;
+
+    while (! f(raiz) < 0.00001){
+        
+    }
 
     return 0;
 }
